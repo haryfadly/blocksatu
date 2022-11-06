@@ -1,14 +1,21 @@
 {
 	"compiler": {
-		"version": "0.4.25+commit.59dbf8f1"
+		"version": "0.5.17+commit.d19bba13"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
+						"internalType": "string",
 						"name": "_value",
 						"type": "string"
 					}
@@ -22,9 +29,10 @@
 			{
 				"constant": true,
 				"inputs": [],
-				"name": "get",
+				"name": "value",
 				"outputs": [
 					{
+						"internalType": "string",
 						"name": "",
 						"type": "string"
 					}
@@ -32,12 +40,6 @@
 				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "constructor"
 			}
 		],
 		"devdoc": {
@@ -51,7 +53,7 @@
 		"compilationTarget": {
 			"MyContract.sol": "MyContract"
 		},
-		"evmVersion": "byzantium",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -61,9 +63,10 @@
 	},
 	"sources": {
 		"MyContract.sol": {
-			"keccak256": "0x4d929ae136f43b3786ed94c3d9a2f3ca8c25fa1893814291d0d64981197a33f6",
+			"keccak256": "0xe074dff00a65a2f4b349c9bff6a5bee8fb208eac8a2407deed9a798d6082828e",
 			"urls": [
-				"bzzr://ea702f8836c75c8976a68c9e0ed9c512eb3fe4c22f514aa2cc488f85d41c4cce"
+				"bzz-raw://2377c82c3f44391724891e0f7b0ad890ae0ee1b60d359f8d2aa5d368601fa486",
+				"dweb:/ipfs/QmQnAAhMdBuu76ZedM22Mahr2usZiNL28uF54QCtSoJGmG"
 			]
 		}
 	},
