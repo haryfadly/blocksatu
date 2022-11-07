@@ -1,26 +1,23 @@
 {
 	"compiler": {
-		"version": "0.5.17+commit.d19bba13"
+		"version": "0.5.1+commit.c8a2cb62"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"constant": false,
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_value",
+						"name": "_firstName",
+						"type": "string"
+					},
+					{
+						"name": "_lastName",
 						"type": "string"
 					}
 				],
-				"name": "set",
+				"name": "addPerson",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -29,11 +26,37 @@
 			{
 				"constant": true,
 				"inputs": [],
-				"name": "value",
+				"name": "peopleCount",
 				"outputs": [
 					{
-						"internalType": "string",
 						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"name": "_firstName",
+						"type": "string"
+					},
+					{
+						"name": "_lastName",
 						"type": "string"
 					}
 				],
@@ -53,7 +76,7 @@
 		"compilationTarget": {
 			"MyContract.sol": "MyContract"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "byzantium",
 		"libraries": {},
 		"optimizer": {
 			"enabled": false,
@@ -63,10 +86,9 @@
 	},
 	"sources": {
 		"MyContract.sol": {
-			"keccak256": "0xe074dff00a65a2f4b349c9bff6a5bee8fb208eac8a2407deed9a798d6082828e",
+			"keccak256": "0x992625cfa345eb73b897f94ec479180562d04172ce44a630d93a87f9fcd6bd5f",
 			"urls": [
-				"bzz-raw://2377c82c3f44391724891e0f7b0ad890ae0ee1b60d359f8d2aa5d368601fa486",
-				"dweb:/ipfs/QmQnAAhMdBuu76ZedM22Mahr2usZiNL28uF54QCtSoJGmG"
+				"bzzr://33b80aedbc611cb93c99342741f2625166aba66f312ec8e7f0a7c5baabdcf0b5"
 			]
 		}
 	},
