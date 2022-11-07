@@ -1,6 +1,6 @@
 pragma solidity 0.5.1;
+
 contract MyContract {
-    
     // string public value = "myValue";
     // string public constant value = "myValue";
     // bool public myBool = true;
@@ -20,43 +20,50 @@ contract MyContract {
     // function set(string memory _value) public {
     //     value = _value;
     //     }
-//    enum State{Waiting, Ready, Active}
-//    State public state;
+    //    enum State{Waiting, Ready, Active}
+    //    State public state;
 
-//    constructor () public {
-//        state = State.Waiting;
-//    } 
-//    function activate () public {
-//        state = State.Active;
-//    }
-//    function isActive () public view returns(bool){
-//        return state == State.Active;
-//    }
+    //    constructor () public {
+    //        state = State.Waiting;
+    //    }
+    //    function activate () public {
+    //        state = State.Active;
+    //    }
+    //    function isActive () public view returns(bool){
+    //        return state == State.Active;
+    //    }
 
     // Person[] public people;
     uint256 public peopleCount = 0;
-    mapping (uint => Person) public people;
+    mapping(uint256 => Person) public people;
 
     address owner;
-    modifier onlyOwner(){
-        msg.
+
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
     }
-    
+
     struct Person {
-        uint _id;
+        uint256 _id;
         string _firstName;
         string _lastName;
     }
 
+    constructor() public {
+        owner = msg.sender;
+    }
 
-
-    function addPerson(string memory _firstName, string memory _lastName) public {
+    function addPerson(string memory _firstName, string memory _lastName)
+        public
+        onlyOwner
+    {
         incrementCount();
         people[peopleCount] = Person(peopleCount, _firstName, _lastName);
         // people.push(Person(_firstName, _lastName));
     }
 
-    function incrementCount () internal {
-        peopleCount +=1;
+    function incrementCount() internal {
+        peopleCount += 1;
     }
 }
