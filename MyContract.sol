@@ -37,10 +37,10 @@ contract MyContract {
     uint256 public peopleCount = 0;
     mapping(uint256 => Person) public people;
 
-    address owner;
+    uint256 openingTime;
 
-    modifier onlyOwner() {
-        require(msg.sender == owner);
+    modifier onlyWhileOpen() {
+        require(block.timestamp >= openingTime);
         _;
     }
 
@@ -51,12 +51,14 @@ contract MyContract {
     }
 
     constructor() public {
-        owner = msg.sender;
+        openingTime = 1667878939; //update this value
     }
 
-    function addPerson(string memory _firstName, string memory _lastName)
+    function addPerson(
+        string memory _firstName, 
+        string memory _lastName)
         public
-        onlyOwner
+        onlyWhileOpen
     {
         incrementCount();
         people[peopleCount] = Person(peopleCount, _firstName, _lastName);
