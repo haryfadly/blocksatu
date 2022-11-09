@@ -1,0 +1,70 @@
+{
+	"id": "be5784818a3ed2e6d6f5be38f171a6a0",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.5.1",
+	"solcLongVersion": "0.5.1+commit.c8a2cb62",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"Math.sol": {
+				"content": ""
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {},
+		"errors": [
+			{
+				"component": "general",
+				"formattedMessage": "Math.sol:1:1: Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.5.1;\"\n\n^\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.5.1;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 0,
+					"file": "Math.sol",
+					"start": 0
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"Math.sol": {
+				"ast": {
+					"absolutePath": "Math.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "0:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
