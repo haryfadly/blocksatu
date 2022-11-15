@@ -6,13 +6,22 @@
 	"output": {
 		"abi": [
 			{
+				"constant": false,
+				"inputs": [],
+				"name": "buyToken",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [],
-				"name": "value",
+				"name": "token",
 				"outputs": [
 					{
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"payable": false,
@@ -20,22 +29,24 @@
 				"type": "function"
 			},
 			{
-				"constant": false,
 				"inputs": [
 					{
-						"name": "_value1",
-						"type": "uint256"
+						"name": "_wallet",
+						"type": "address"
 					},
 					{
-						"name": "_value2",
-						"type": "uint256"
+						"name": "_token",
+						"type": "address"
 					}
 				],
-				"name": "calculate",
-				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
-				"type": "function"
+				"type": "constructor"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
 			}
 		],
 		"devdoc": {
@@ -58,16 +69,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Math.sol": {
-			"keccak256": "0x95a88182dcc76ad3512b5160d3b9772557104c923bd867b629b9a19891f6332d",
-			"urls": [
-				"bzzr://bfab602edea15665aa695de8be0758556e1f86539bae68b8d5f5b86e51ff7ff0"
-			]
-		},
 		"MyContract.sol": {
-			"keccak256": "0x653fb95f3798867006531d1660ade4197157c59142d569a8f00a0ad7c4f760d4",
+			"keccak256": "0xa069cfe65349e02727aa3737ffd28ae72c1905b7ef47f4e7310facd83038eac2",
 			"urls": [
-				"bzzr://fdf43acfd941180d301783f822e5bb53c2f66c8a22e41011d668ff09bae4c101"
+				"bzzr://f4167574415ddab7783649a0e8ce7de1f48a02e58b88faf1227cc1c02d68628f"
 			]
 		}
 	},

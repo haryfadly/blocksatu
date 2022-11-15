@@ -1,16 +1,30 @@
 pragma solidity 0.5.1;
 
-import "./Math.sol";
+contract ERC20Token{
+    string public name;
+    mapping (address => uint256) public balances;
 
-// using DRY: dont repeat yourself
+    function mint()public{
+        balances[msg.sender] ++;
+    }
+}
+
 contract MyContract {
-    // ..
-    uint256 public value;
+    address payable wallet;
+    address public token;
 
-    function calculate(uint _value1, uint _value2) public {
-        // ..
-        // value = _value1 / _value2;
-        value = Math.divide(_value1, _value2); 
+    constructor(address payable _wallet, address _token) public {
+        wallet = _wallet;
+        token = _token;
+    }
 
+    function() external payable{
+        buyToken();
+    }
+
+    function buyToken()public payable {
+        ERC20Token _token = ERC20Token(address(token));
+        _token.mint();
+        wallet.transfer(msg.value);
     }
 }

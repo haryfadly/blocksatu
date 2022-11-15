@@ -46,17 +46,6 @@
 				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "constructor"
 			}
 		],
 		"devdoc": {
@@ -80,9 +69,9 @@
 	},
 	"sources": {
 		"MyContract.sol": {
-			"keccak256": "0xe17d6b00621bb94c2beadca78f36840f06ab26e9fb400f994078b00c65d7532f",
+			"keccak256": "0xa069cfe65349e02727aa3737ffd28ae72c1905b7ef47f4e7310facd83038eac2",
 			"urls": [
-				"bzzr://3d0276b6c272b2a09ba174527ff16881f056e3d2d4e415edbc3840c897e0d528"
+				"bzzr://f4167574415ddab7783649a0e8ce7de1f48a02e58b88faf1227cc1c02d68628f"
 			]
 		}
 	},
