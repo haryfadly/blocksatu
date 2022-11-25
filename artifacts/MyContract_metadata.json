@@ -70,9 +70,9 @@
 	},
 	"sources": {
 		"MyContract.sol": {
-			"keccak256": "0xa069cfe65349e02727aa3737ffd28ae72c1905b7ef47f4e7310facd83038eac2",
+			"keccak256": "0x4560478a51a5db8500d1f2be2e90b17a3a44630c2fa17c1d3959a31a945478c1",
 			"urls": [
-				"bzzr://f4167574415ddab7783649a0e8ce7de1f48a02e58b88faf1227cc1c02d68628f"
+				"bzzr://81c73354b58c9e115f59261f9c4acf59d84c8ca6c423a73b6d025cb96d13083c"
 			]
 		}
 	},
